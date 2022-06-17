@@ -9,8 +9,8 @@
 			"label": "save and compile for C++",
 			"command": "g++",
 			"args": [
-				"${fileDirname}/*.cpp",
-				//"${file}",
+				//"${fileDirname}/*.cpp",
+				"${file}",
 				"-o",
 				"${fileDirname}/${fileBasenameNoExtension}"
 			],
