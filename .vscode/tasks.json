@@ -6,55 +6,6 @@
     "presentation" : { "reveal": "always" },
     "tasks": [
 		{
-			"label": "save and compile for C++",
-			"command": "g++",
-			"args": [
-				//"${fileDirname}/*.cpp",
-				"${file}",
-				"-o",
-				"${fileDirname}/${fileBasenameNoExtension}"
-			],
-			"group": "build",
-			"problemMatcher": {
-				"fileLocation": [
-					"relative",
-					"${workspaceRoot}"
-				],
-				"pattern": {
-					"regexp": "^(.*):(\\d+):(\\d+):\\s+(warning error):\\s+(.*)$",
-					"file": 1,
-					"line": 2,
-					"column": 3,
-					"severity": 4,
-					"message": 5
-				}
-			}
-		},
-		{
-			"label": "save and compile for C",
-			"command": "gcc",
-			"args": [
-				"${file}",
-				"-o",
-				"${fileDirname}/${fileBasenameNoExtension}"
-			],
-			"group": "build",
-			"problemMatcher": {
-				"fileLocation": [
-					"relative",
-					"${workspaceRoot}"
-				],
-				"pattern": {
-					"regexp": "^(.*):(\\d+):(\\d+):\\s+(warning error):\\s+(.*)$",
-					"file": 1,
-					"line": 2,
-					"column": 3,
-					"severity": 4,
-					"message": 5
-				}
-			}
-		},
-		{
 			"label": "execute",
 			"command": "cmd",
 			"group": "test",
@@ -70,8 +21,8 @@
 			"args": [
 				"-fdiagnostics-color=always",
 				"-g",
-				//"${file}", //헤더파일 없을때 사용
-				"${fileDirname}/*.cpp",	//헤더파일 있을 때 사용
+				"${file}", //헤더파일 없을때 사용
+				//"${fileDirname}/*.cpp",	//헤더파일 있을 때 사용
 				"-o",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],
