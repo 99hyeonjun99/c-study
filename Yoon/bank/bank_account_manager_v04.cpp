@@ -1,4 +1,4 @@
-//class로 변경
+//const 추가
 #include <iostream>
 #include <cstring>
 using namespace std;
@@ -17,6 +17,10 @@ class Account{
             strcpy(name,cname);
             
         }
+        Account(const Account &ref):accountID(ref.accountID), money(ref.money){
+            name=new char[strlen(ref.name)+1];
+            strcpy(name,ref.name);
+        };
 
         void SetAccount(char* name, int accountID, int money){
             int len=strlen(name)+1;
@@ -44,7 +48,7 @@ class Account{
             return accountID;
         }
         
-        void ShowAccount(){
+        void ShowAccount() const {
             cout<<"account id= "<<accountID<<endl;
             cout<<"your money= "<<money<<endl;
             cout<<"your name= "<<name<<endl;
