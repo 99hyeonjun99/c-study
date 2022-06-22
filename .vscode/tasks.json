@@ -21,8 +21,8 @@
 			"args": [
 				"-fdiagnostics-color=always",
 				"-g",
-				"${file}", //헤더파일 없을때 사용
-				//"${fileDirname}/*.cpp",	//헤더파일 있을 때 사용
+				//"${file}", //헤더파일 없을때 사용
+				"${fileDirname}/*.cpp",	//헤더파일 있을 때 사용
 				"-o",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],
